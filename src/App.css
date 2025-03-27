@@ -37,7 +37,24 @@
   }
 } */
 
-* {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -149,4 +166,41 @@ body {
     width: 100%;
   }
 }
+ */
+
+
+
+
+
+
+ /*for page 2*/
+
+
+
+
+ /* .app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.dashboard {
+  flex: 1;
+  padding: 20px;
+} */
+
+
+
+
+
+
+
+
+
+
 

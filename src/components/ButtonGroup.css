@@ -1,0 +1,16 @@
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  .button-group button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+  }
+  .red { background: red; }
+  .orange { background: orange; }
+  .green { background: green; }
+  .blue { background: blue; }
