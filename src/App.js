@@ -1,61 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-
-// import Navbar from "./components/navbar.js";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Navbar />
-//       {/* Your other components */}
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import React from "react";
 import Navbar from "./components/navbar";
 import Sidebar from "./components/Sidebar";
 import MissingReport from "./components/MissingReport";
 import MapComponent from "./components/MapComponent";
-import EmergencyActions from "./components/EmergencyActions";
 import "./App.css";
+
+const Header = () => {
+  return (
+    <div className="app-header">
+      <div className="header-section">
+        <h2>Live Interactive Map</h2>
+        <div className="toggle-group">
+          <label className="toggle">
+            <input type="checkbox" />
+            <span className="toggle-label">Notify me about nearby danger areas</span>
+          </label>
+          <label className="toggle">
+            <input type="checkbox" />
+            <span className="toggle-label">Show emergency service locations</span>
+          </label>
+          <label className="toggle">
+            <input type="checkbox" />
+            <span className="toggle-label">Alert me about route safety</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 function App() {
   return (
     <div className="app-container">
-      <Navbar />
-      <div className="main-layout">
-        <Sidebar />
-        <div className="content">
-          <EmergencyActions />
+      <Sidebar />
+      <div className="main-content">
+        <Header />
+        <div className="content-layout">
           <MapComponent />
           <MissingReport />
         </div>

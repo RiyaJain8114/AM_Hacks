@@ -4,13 +4,20 @@ import "./Sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <button>Dashboard</button>
-      <button>Live Disaster Map</button>
-      <button>Alerts & Notification</button>
-      <button className="active">Emergency Requests</button>
-      <button>Resource Allocation</button>
-      <button>User Management (Admin only)</button>
-      <button>Settings</button>
+      <div className="sidebar-header">
+        <h1>ResQLink</h1>
+        <span>Insights</span>
+      </div>
+      
+      <nav className="sidebar-nav">
+        <button className="nav-item">Dashboard</button>
+        <button className="nav-item">Live Disaster Map</button>
+        <button className="nav-item">Alerts & Notification</button>
+        <button className="nav-item active">Emergency Requests</button>
+        <button className="nav-item">Resource Allocation</button>
+        <button className="nav-item admin">User Management (Admin only)</button>
+        <button className="nav-item">Settings</button>
+      </nav>
     </div>
   );
 };
