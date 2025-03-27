@@ -26,15 +26,43 @@ import './App.css';
 
 
 
-import Navbar from "./components/navbar.js";
+// import Navbar from "./components/navbar.js";
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Navbar />
+//       {/* Your other components */}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+import React from "react";
+import Navbar from "./components/navbar";
+import Sidebar from "./components/Sidebar";
+import MissingReport from "./components/MissingReport";
+import MapComponent from "./components/MapComponent";
+import EmergencyActions from "./components/EmergencyActions";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app-container">
       <Navbar />
-      {/* Your other components */}
+      <div className="main-layout">
+        <Sidebar />
+        <div className="content">
+          <EmergencyActions />
+          <MapComponent />
+          <MissingReport />
+        </div>
+      </div>
     </div>
   );
 }
 
 export default App;
+

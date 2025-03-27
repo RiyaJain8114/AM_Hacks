@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,23 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
+.main-layout {
+  display: flex;
+  flex-direction: row;
+}
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+

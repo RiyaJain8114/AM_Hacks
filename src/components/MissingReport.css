@@ -1,0 +1,14 @@
+.missing-report {
+    background: red;
+    padding: 20px;
+    color: white;
+    width: 300px;
+    text-align: center;
+  }
+  .missing-report input,
+  .missing-report textarea {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+  }
+  
