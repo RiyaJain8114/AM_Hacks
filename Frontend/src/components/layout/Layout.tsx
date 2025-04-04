@@ -5,6 +5,7 @@ import { Box, CssBaseline } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import Header from './Header';
 import Footer from './Footer';
+import Chatbot from '../ChatbotButton';
 
 // Theme colors for consistent application design
 export const THEME_COLORS = {
@@ -49,6 +50,7 @@ const Layout: React.FC<LayoutProps> = ({ children, showHeader = true }) => {
           {children}
         </Box>
         <Footer />
+        <Chatbot />
       </Box>
     </>
   );
