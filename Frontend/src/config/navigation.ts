@@ -1,3 +1,8 @@
+// navigation.tsx
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import Link from 'next/link';
+import React from 'react';
+
 export const navigation = {
   common: {
     dashboard: {
@@ -61,4 +66,35 @@ export const navigation = {
       title: 'Resources',
     },
   },
-}; 
+  auth: {
+    signIn: {
+      societyHead: {
+        path: '/sign-in/society-head',
+        title: 'Login as Society Head',
+      },
+      collegeAuthority: {
+        path: '/sign-in/college-authority',
+        title: 'Login as College Authority',
+      },
+    },
+    components: {
+      user: {
+        signedIn: (
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        ),
+        signedOut: (
+          <SignedOut>
+            <Link href="/sign-in/society-head">
+              <button>Login as Society Head</button>
+            </Link>
+            <Link href="/sign-in/college-authority">
+              <button>Login as College Authority</button>
+            </Link>
+          </SignedOut>
+        ),
+      },
+    },
+  },
+};
