@@ -3,12 +3,14 @@ const Budget = require("../models/Budget");
 // Create a new budget request
 exports.createBudget = async (req, res) => {
   try {
-    const { eventId, requestedBy, amount, status, comments } = req.body;
+    const { eventId, requestedBy, amount,type, category, status, comments } = req.body;
 
     const newBudget = await Budget.create({
       eventId,
       requestedBy,
       amount,
+      type,
+      category,
       status: status || "pending", // Default status is 'pending'
       comments,
     });

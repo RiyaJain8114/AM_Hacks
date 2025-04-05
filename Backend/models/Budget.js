@@ -22,8 +22,8 @@ const budgetSchema = new mongoose.Schema(
     },
     type: {
       type: String,
-      enum: ["income", "expense"], // Instead of separate models
       required: true,
+      enum: ["income", "expense"]
     },
     source: {
       type: String,
